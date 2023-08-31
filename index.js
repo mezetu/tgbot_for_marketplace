@@ -30,7 +30,7 @@ bot.on('message', async msg => {
     }
 
     if(msg.text == 'Сортировка по бренду') {
-        await bot.sendMessage(chatId, 'Бренды: ', { 
+        await bot.sendMessage(chatId, 'Бренды ', { 
             reply_markup: {
                 keyboard: brands,
                 resize_keyboard: true
