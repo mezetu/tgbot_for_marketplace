@@ -1,6 +1,7 @@
 const TelegramBot = require('node-telegram-bot-api');
 require('dotenv').config()
-const bot = new TelegramBot(process.env.TOKEN, {polling: true})
+const TOKEN = "6481292373:AAFrgyurHWna7Qd4PWqbPPp0OhZ3WXvCZjg"
+const bot = new TelegramBot(TOKEN, {polling: true})
 const brand = require('./brandsSort')
 bot.setMyCommands( [
     {command: '/start', description: 'Навигация'},
@@ -30,7 +31,7 @@ bot.on('message', async msg => {
     }
 
     if(msg.text == 'Сортировка по бренду') {
-        await bot.sendMessage(chatId, 'Бренды ', { 
+        await bot.sendMessage(chatId, 'Бренды: ', { 
             reply_markup: {
                 keyboard: brands,
                 resize_keyboard: true
