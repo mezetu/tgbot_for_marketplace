@@ -4,5 +4,5 @@ meta:
     name: npm
     version: 18
 
-build:
-  additionalCommands: npm run dev
+run:
+  scriptName: index.js
