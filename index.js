@@ -1,8 +1,6 @@
 const TelegramBot = require('node-telegram-bot-api');
 require('dotenv').config()
-
-const token = '6481292373:AAFSsflpg5sAnfNYRimyXlE0LQKCsq5FYT4'
-const bot = new TelegramBot(token, {polling: true})
+const bot = new TelegramBot(process.env.TOKEN, {polling: true})
 const brand = require('./brandsSort')
 
 bot.setMyCommands( [
@@ -20,8 +18,6 @@ const bazeMenu =  {
 }
 
 bot.on('message', async msg => {
-
-    console.log(msg);    
 
     const chatId = msg.chat.id
 
