@@ -1,8 +1,6 @@
 const TelegramBot = require('node-telegram-bot-api');
 require('dotenv').config()
-require('os').config()
-const token = os.environ["TOKEN"]
-const bot = new TelegramBot(token, {polling: true})
+const bot = new TelegramBot(process.env.TOKEN, {polling: true})
 const brand = require('./brandsSort')
 bot.setMyCommands( [
     {command: '/start', description: 'Навигация'},
