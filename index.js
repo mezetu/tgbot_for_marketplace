@@ -21,6 +21,8 @@ const bazeMenu =  {
 
 bot.on('message', async msg => {
 
+    console.log(msg);    
+
     const chatId = msg.chat.id
 
     if(msg.text == '/start'){
