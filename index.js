@@ -82,6 +82,6 @@ bot.on('message', async msg => {
     }
 
     if(msg.text == 'Обратно в меню') {
-        await bot.sendMessage(chatId, `Меню бота: `, bazeMenu)
+        await bot.sendMessage(chatId, `Меню бота`, bazeMenu)
     }
 })
