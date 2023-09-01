@@ -1,6 +1,7 @@
 const TelegramBot = require('node-telegram-bot-api');
 require('dotenv').config()
-const bot = new TelegramBot(process.env.TOKEN, {polling: {
+const TOKEN = process.env.TOKEN
+const bot = new TelegramBot(TOKEN, {polling: {
     interval: 1000
  }})
 const brand = require('./brandsSort')
